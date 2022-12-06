@@ -1,7 +1,7 @@
-export const Body = () => {
+export const Body = (props) => {
     return (
         <div>
-            BODY IMAGE
+            {props.type} body image here
         </div>
     )
 }
