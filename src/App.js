@@ -1,38 +1,12 @@
+import { HealthIssues } from "@care-plan/health-issues"
 
-const list = [
-  {
-    id: 'a',
-    firstname: 'Robin',
-    lastname: 'Wieruch',
-    year: 1988,
-  },
-  {
-    id: 'b',
-    firstname: 'Dave',
-    lastname: 'Davidds',
-    year: 1990,
-  },
-];
-
-
-
-const App = () => <List list={list} />;
-
-const List = ({ list }) => (
-    <ul>
-      {list.map(item => (
-          <ListItem key={item.id} item={item} />
-      ))}
-    </ul>
-);
-
-const ListItem = ({ item }) => (
-    <li>
-      <div>{item.id}</div>
-      <div>{item.firstname}</div>
-      <div>{item.lastname}</div>
-      <div>{item.year}</div>
-    </li>
-);
+const App = () => {
+    return (
+        <div>
+            <h1>Hi</h1>
+            <HealthIssues />
+        </div>
+    )
+}
 
 export default App
