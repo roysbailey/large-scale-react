@@ -1,7 +1,0 @@
-{
-  "name": "@care-plan/health-issues",
-  "main": "index.js",
-  "babel": {
-    "presets": ["@babel/preset-env", "@babel/preset-react"]
-  }
-}
