@@ -1,4 +1,4 @@
-import { Navigation } from "../navigation";
+import { Navigation } from "@cc-cp-common/navigation";
 
 export const Layout = ({children}) => {
     return (
