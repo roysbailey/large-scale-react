@@ -1,13 +1,13 @@
 import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
-import { HealthIssues } from "@care-plan/health-issues"
-import { IncidentAnalysis } from "@care-plan/incident-analysis"
-import { Home } from "./pages/Home";
-import { Layout } from "./components/layout";
+import { HealthIssues } from "@cc-cp-features/health-issues"
+import { IncidentAnalysis } from "@cc-cp-features/incident-analysis"
+import { Layout } from "@cc-cp-common/layout";
+import { Dashboard } from "@cc-cp-features/dashboard";
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <Layout><Home /></Layout>,
+        element: <Layout><Dashboard /></Layout>,
     },
     {
         path: "/health-issues",
