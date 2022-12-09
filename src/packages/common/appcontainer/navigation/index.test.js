@@ -1,5 +1,6 @@
-import { Navigation } from './Navigation';
+import { Navigation } from './index';
 import { Link } from 'react-router-dom';
+import {shallow} from 'react-test-renderer/shallow';
 
 jest.mock('react-router-dom', () => ({
     Link: () => <div />,
