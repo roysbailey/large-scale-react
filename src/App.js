@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { HealthIssues } from "@cc-cp-features/health-issues"
 import { IncidentAnalysis } from "@cc-cp-features/incident-analysis"
 import { Layout } from "@cc-cp-common/layout";
