@@ -1,12 +1,14 @@
-import { useState, useEffect } from "react";
-import { LoadingSpinner } from '@cc-cp-common/loading-spinner'
+import { useState, useEffect, useContext } from "react";
+import { LoadingSpinner } from 'cc-test-design-system'
 import { fetchCountryInfo } from "./data/countryInfo";
 import { CountryInfo } from "./components/country-info";
-import {CountrySelector} from "./components/country-selector";
+import { CountrySelector } from "./components/country-selector";
+import { CountryCtx, UserCtx } from "@cc-cp-context/contexts";
 
 export const CountryDetails = () => {
 
-    const [selectedCountryCode, setSelectedCountryCode] = useState();
+    const {selectedCountryCode, setSelectedCountryCode} = useContext(CountryCtx);
+    const {userName} = useContext(UserCtx);
     const [countryDetails, setCountryDetails] = useState(undefined);
     const [loading, setLoading] = useState(false);
 
@@ -24,11 +26,12 @@ export const CountryDetails = () => {
       };
 
     return (
-        <div>
+        <>
+            <p>User Name: {userName}</p>
             <h2>Country details!</h2>
             Select a country from the list to see details!
             <CountrySelector selectCountry={selectCountry} />
             {loading ? <LoadingSpinner /> : <CountryInfo countryDetails={countryDetails} />}
-        </div>
+        </>
     )
 }

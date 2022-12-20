@@ -4,6 +4,8 @@ import { IncidentAnalysis } from "@cc-cp-features/incident-analysis"
 import { Layout } from "@cc-cp-common/layout";
 import { Dashboard } from "@cc-cp-features/dashboard";
 import { CountryDetails } from "@cc-cp-features/country-details";
+import { CountryCtx, UserCtx } from "@cc-cp-context/contexts";
+import { useEffect, useState } from "react";
 
 const router = createBrowserRouter([
     {
@@ -25,8 +27,22 @@ const router = createBrowserRouter([
 ]);
 
 const App = () => {
+    const [selectedCountryCode, setSelectedCountryCode] = useState();
+    const countryCtx = { selectedCountryCode, setSelectedCountryCode };
+    
+    const [userName, setUserName] = useState();
+    const userCtx = { userName, setUserName };
+
+    useEffect(function() {
+        setUserName("Silvertouch");
+    }, [])
+
     return (
-        <RouterProvider router={router} />
+        <UserCtx.Provider value={userCtx}>
+            <CountryCtx.Provider value={countryCtx}>
+                <RouterProvider router={router} />
+            </CountryCtx.Provider>
+        </UserCtx.Provider>
     )
 }
 

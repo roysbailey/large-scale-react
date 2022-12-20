@@ -1,9 +1,12 @@
+import { CountryCtx } from "@cc-cp-context/contexts"
+import { useContext } from "react"
 
 export const CountrySelector = ({selectCountry}) => {
-
+    const {selectedCountryCode} = useContext(CountryCtx);
+    
     return (
         <div>
-        <select onChange={selectCountry}>
+        <select value={selectedCountryCode} onChange={selectCountry}>
             <option value=""></option>
             <option value="gb">Great Britain</option>
             <option value="it">Italy</option>
