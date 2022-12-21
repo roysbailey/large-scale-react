@@ -1,13 +1,22 @@
 import { CountryDetails } from './index';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { CountryCtx, UserCtx } from '@cc-cp-context/contexts';
+import TestContextWrapper from '@cc-cp-context/test-wrapper';
+import { act } from 'react-dom/test-utils';
 
 describe('Country details show correctly', () => {
     it('renders selector but no country info on page load', () => {
-        render(<CountryDetails />);
+        act(function(){
+            render(
+                <TestContextWrapper>
+                    <CountryDetails />
+                </TestContextWrapper>
+            );
+        });
 
         expect(screen.getByText(/Select a country from the list/)).toBeInTheDocument();
-        expect(screen.queryByText(/Name:/)).toBeNull();
+        expect(screen.queryByText(/Country's Name:/)).toBeNull();
         expect(screen.queryByText(/Capital:/)).toBeNull();
         expect(screen.queryByText(/Number of regions:/)).toBeNull();
         expect(screen.queryByText(/Main currency:/)).toBeNull();
@@ -23,11 +32,18 @@ describe('Country details show correctly', () => {
         );
 
         // Act (render and select GB from the box)
-        render(<CountryDetails />);
-        userEvent.selectOptions(
-            screen.getByRole('combobox'),
-            screen.getByRole('option', { name: 'Great Britain' })
-          );
+        act(function() {
+            render(
+                <TestContextWrapper>
+                    <CountryDetails />
+                </TestContextWrapper>
+            );
+
+            userEvent.selectOptions(
+                screen.getByRole('combobox'),
+                screen.getByRole('option', { name: 'Great Britain' })
+            );
+        });
 
         // Assert (the country is now displayed)
         expect(screen.getByRole('option', { name: 'Great Britain' }).selected).toBe(true)

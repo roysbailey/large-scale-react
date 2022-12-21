@@ -4,7 +4,7 @@ export const CountryInfo = ({countryDetails}) => {
 
     return (
         <div>
-            <div>Name: {countryDetails.name}</div>
+            <div>Country's Name: {countryDetails.name}</div>
             <div>Capital: {countryDetails.capital}</div>
             <div>Number of regions: {countryDetails.numRegions}</div>
             <div>Main currency: {countryDetails.currencyCodes[0]}</div>
