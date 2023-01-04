@@ -1,4 +1,4 @@
 {
   "name": "@cc-cp-common/navigation",
-  "main": "index.js"
+  "main": "index.tsx"
 }

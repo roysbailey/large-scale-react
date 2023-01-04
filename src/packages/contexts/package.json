@@ -1,4 +1,4 @@
 {
   "name": "@cc-cp-context/contexts",
-  "main": "index.js"
+  "main": "index.tsx"
 }

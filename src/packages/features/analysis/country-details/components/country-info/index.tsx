@@ -1,6 +1,6 @@
-export const CountryInfo = ({countryDetails}) => {
+export const CountryInfo = ({countryDetails}:any) => {
 
-    if (!countryDetails) return;
+    if (!countryDetails) return (<></>)
 
     return (
         <div>

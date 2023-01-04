@@ -27,19 +27,16 @@ const router = createBrowserRouter([
 ]);
 
 const App = () => {
-    const [selectedCountryCode, setSelectedCountryCode] = useState();
-    const countryCtx = { selectedCountryCode, setSelectedCountryCode };
-    
-    const [userName, setUserName] = useState();
-    const userCtx = { userName, setUserName };
+    const [selectedCountryCode, setSelectedCountryCode] = useState("");
+    const [userName, setUserName] = useState("");
 
     useEffect(function() {
         setUserName("Silvertouch");
     }, [])
 
     return (
-        <UserCtx.Provider value={userCtx}>
-            <CountryCtx.Provider value={countryCtx}>
+        <UserCtx.Provider value={{ userName, setUserName }}>
+            <CountryCtx.Provider value={{ selectedCountryCode, setSelectedCountryCode }}>
                 <RouterProvider router={router} />
             </CountryCtx.Provider>
         </UserCtx.Provider>

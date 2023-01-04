@@ -1,4 +1,4 @@
-import { CountryInfo } from './index';
+import {CountryInfo} from './index';
 import { render, screen } from '@testing-library/react';
 
 describe('Country Info renders correctly', () => {

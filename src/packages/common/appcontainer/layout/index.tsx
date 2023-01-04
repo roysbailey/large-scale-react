@@ -1,6 +1,6 @@
 import { Navigation } from "@cc-cp-common/navigation";
 
-export const Layout = ({children}) => {
+export const Layout = ({children}:any) => {
     return (
         <div className="page">
             <Navigation />
