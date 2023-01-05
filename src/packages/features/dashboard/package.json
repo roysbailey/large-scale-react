@@ -1,4 +1,4 @@
 {
   "name": "@cc-cp-features/dashboard",
-  "main": "index.js"
+  "main": "index.tsx"
 }

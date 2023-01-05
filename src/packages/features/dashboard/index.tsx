@@ -3,14 +3,14 @@ import { useContext, useRef } from "react";
 
 export const Dashboard = () => {
     const {userName, setUserName} = useContext(UserCtx)
-    const inpValue = useRef("")
+    const inpValue = useRef<HTMLInputElement>(null)
 
     const inputStyle = {
         marginRight: "5px"
     }
 
     function handleUsernameSubmit() {
-        setUserName(inpValue.current.value)
+        setUserName(inpValue.current!.value)
     }
 
     return (

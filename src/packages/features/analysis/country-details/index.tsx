@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from "react";
-import { LoadingSpinner } from 'cc-test-design-system'
+import { LoadingSpinner } from "cc-test-design-system";
 import { fetchCountryInfo } from "./data/countryInfo";
 import { CountryInfo } from "./components/country-info";
 import { CountrySelector } from "./components/country-selector";
@@ -19,11 +19,11 @@ export const CountryDetails = () => {
             setCountryDetails(info);
         }
         fetchData();
-    }, [selectedCountryCode]);    
+    }, [selectedCountryCode]);
 
-    const selectCountry = (event) => {
+    const selectCountry = (event:any) => {
         setSelectedCountryCode(event.target.value);
-      };
+    };
 
     return (
         <>

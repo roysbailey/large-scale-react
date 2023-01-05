@@ -1,4 +1,4 @@
 {
   "name": "@cc-cp-features/country-details",
-  "main": "index.js"
+  "main": "index.tsx"
 }

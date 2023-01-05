@@ -1,4 +1,4 @@
 {
   "name": "@cc-cp-features/health-issues",
-  "main": "index.js"
+  "main": "index.tsx"
 }
