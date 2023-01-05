@@ -1,4 +1,18 @@
-export const CountryInfo = ({countryDetails}:any) => {
+type CountryDetails = {
+    name: string;
+    capital: string;
+    numRegions: number;
+    currencyCodes: string[];
+    flagImageUri: string;
+}
+
+type Props = {
+    countryDetails: CountryDetails | undefined
+}
+
+export const CountryInfo = (props:Props) => {
+
+    const {countryDetails} = props
 
     if (!countryDetails) return (<></>)
 

@@ -1,7 +1,12 @@
 import { CountryCtx } from "@cc-cp-context/contexts"
 import { useContext } from "react"
 
-export const CountrySelector = ({selectCountry}:any) => {
+type Props = {
+    selectCountry: (event: { target: { value: string }}) => void
+}
+
+export const CountrySelector = (props:Props) => {
+    const {selectCountry} = props;
     const {selectedCountryCode} = useContext(CountryCtx);
     
     return (

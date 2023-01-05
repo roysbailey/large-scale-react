@@ -21,7 +21,7 @@ export const CountryDetails = () => {
         fetchData();
     }, [selectedCountryCode]);
 
-    const selectCountry = (event:any) => {
+    const selectCountry = (event: { target: { value: string; }; }) => {
         setSelectedCountryCode(event.target.value);
     };
 

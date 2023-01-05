@@ -1,6 +1,11 @@
 import { Navigation } from "@cc-cp-common/navigation";
+import { ReactFragment } from "react";
 
-export const Layout = ({children}:any) => {
+type Props = React.PropsWithChildren<{}>;
+
+export const Layout = (props:Props) => {
+    const {children} = props
+
     return (
         <div className="page">
             <Navigation />
