@@ -1,5 +1,4 @@
 import { Navigation } from "@cc-cp-common/navigation";
-import { ReactFragment } from "react";
 
 type Props = React.PropsWithChildren<{}>;
 

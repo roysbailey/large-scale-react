@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { DisplayMenu } from "./components/display-menu";
 import { Body } from './components/body'
 import { UserCtx } from '@cc-cp-context/contexts';
