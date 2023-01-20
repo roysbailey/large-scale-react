@@ -2,7 +2,6 @@ import { render, screen } from '@testing-library/react';
 import { CountryDetails } from './index';
 import userEvent from '@testing-library/user-event';
 import TestContextWrapper from '@cc-cp-context/test-wrapper';
-import { JsonObjectExpression } from 'typescript';
 
 describe('Country details show correctly', () => {
     it('renders selector but no country info on page load', () => {
