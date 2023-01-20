@@ -1,0 +1,4 @@
+{
+  "name": "@cc-cp-common/countryinfo-api-client",
+  "main": "CountryInfoAPIClient.ts"
+}

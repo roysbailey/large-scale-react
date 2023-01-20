@@ -1,13 +1,14 @@
-type CountryDetails = {
-    name: string;
-    capital: string;
-    numRegions: number;
-    currencyCodes: string[];
-    flagImageUri: string;
-}
+import { CountryInfoData } from "../../data/countryInfo";
+// type CountryDetails = {
+//     name: string;
+//     capital: string;
+//     numRegions: number;
+//     currencyCodes: string[];
+//     flagImageUri: string;
+// }
 
 type Props = {
-    countryDetails: CountryDetails | undefined
+    countryDetails: CountryInfoData | undefined
 }
 
 export const CountryInfo = (props:Props) => {
